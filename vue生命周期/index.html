@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+</head>
+<body>
+    <div id='app'>
+        {{message}}
+        <button @click='change'>触发update</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                message:"nihao",
+            },
+            beforeCreate(){
+                console.log('beforeCreate')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            created(){
+                console.log('created')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            beforeMount(){
+                console.log('beforeMount')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            mounted(){
+                console.log('mounted')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            beforeUpdate(){
+                console.log('beforeUpdate')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            updated(){
+                console.log('updated')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            beforeDestory(){
+                console.log('beforeDestory')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            destory(){
+                console.log('destoryed')
+                console.log(this.$data)
+                console.log(this.$el)
+                console.log(this.change)
+                console.log('---------------------')
+            },
+            methods:{
+                change(){
+                    this.message+='n'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
