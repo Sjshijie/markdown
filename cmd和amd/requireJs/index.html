@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app'>sf</div>
+    <!-- data-main 该属性是直接写在引入require.js的script标签上，在require.js 加载完毕时，会自动去加载配置文件 app.js。
+    通过 data-main 去加载入口文件，便会使配置对象中的 baseUrl 属性默认指向地址改为 app.js 所在的位置，相比之下我更加推荐这种方式，因为它更可能的方便快捷。 -->
+    <script data-main="./app" src="https://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+
+    <script>
+        require.config({
+            paths: {
+                'jquery': 'https://code.jquery.com/jquery-3.1.1.min',
+                'luoji1': 'luoji1'
+            }
+        });
+    </script>
+</body>
+
+</html>
